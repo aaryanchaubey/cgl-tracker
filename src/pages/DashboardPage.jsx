@@ -30,14 +30,30 @@ function StatCard({ label, value, color, icon }) {
 
 /* ─── Subtask checkbox row ───────────────────────────────────── */
 function SubtaskRow({ subtask, done, onToggle }) {
+  const [saving, setSaving] = useState(false)
+  const [flash, setFlash]   = useState(false)   // brief "Saved" flash
+
+  const handleClick = async () => {
+    setSaving(true)
+    try {
+      await onToggle()
+      setFlash(true)
+      setTimeout(() => setFlash(false), 1200)
+    } finally {
+      setSaving(false)
+    }
+  }
+
   return (
     <button
-      onClick={onToggle}
+      onClick={handleClick}
+      disabled={saving}
       className="w-full flex items-start gap-3 px-3 py-2.5 rounded-xl text-left transition-all"
       style={{
         backgroundColor: done ? 'rgba(16,185,129,0.07)' : 'rgba(255,255,255,0.02)',
         border: '1px solid',
         borderColor: done ? 'rgba(16,185,129,0.2)' : 'var(--color-border)',
+        opacity: saving ? 0.7 : 1,
       }}
     >
       {/* Checkbox */}
@@ -45,14 +61,18 @@ function SubtaskRow({ subtask, done, onToggle }) {
         className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-md border-2 flex items-center justify-center transition-all duration-200"
         style={{
           backgroundColor: done ? '#10b981' : 'transparent',
-          borderColor: done ? '#10b981' : 'var(--color-border)',
+          borderColor: saving ? 'var(--color-accent)' : done ? '#10b981' : 'var(--color-border)',
         }}
       >
-        {done && (
+        {saving ? (
+          <svg className="animate-spin" width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M5 1v2M5 7v2M1 5h2M7 5h2" stroke="var(--color-accent)" strokeWidth="1.5" strokeLinecap="round"/>
+          </svg>
+        ) : done ? (
           <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
             <path d="M1 4L3.5 6.5L9 1" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-        )}
+        ) : null}
       </div>
 
       {/* Text */}
@@ -72,9 +92,16 @@ function SubtaskRow({ subtask, done, onToggle }) {
         </p>
       </div>
 
-      {/* Done badge */}
-      {done && (
-        <span className="flex-shrink-0 text-xs px-1.5 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(16,185,129,0.15)', color: '#10b981' }}>
+      {/* Status badge */}
+      {flash && (
+        <span className="flex-shrink-0 text-xs px-1.5 py-0.5 rounded-full animate-pulse"
+          style={{ backgroundColor: 'rgba(16,185,129,0.2)', color: '#10b981' }}>
+          Saved
+        </span>
+      )}
+      {!flash && done && (
+        <span className="flex-shrink-0 text-xs px-1.5 py-0.5 rounded-full"
+          style={{ backgroundColor: 'rgba(16,185,129,0.15)', color: '#10b981' }}>
           ✓
         </span>
       )}
