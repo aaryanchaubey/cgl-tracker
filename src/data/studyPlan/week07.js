@@ -6,6 +6,7 @@ export const DAYS = [
   // ─── DAY 43 ─── June 6, Saturday (Weekend · Phase 2 · hasQuiz: true)
   {
     id: "2026-06-06",
+    date: "2026-06-06",
     dayNumber: 43,
     phase: "pre-acceleration",
     tier: "pre",
@@ -158,6 +159,7 @@ The strongest hunters do not fear the dungeon. They have prepared so thoroughly 
   // ─── DAY 44 ─── June 7, Sunday (Weekend · Phase 2 · hasQuiz: true)
   {
     id: "2026-06-07",
+    date: "2026-06-07",
     dayNumber: 44,
     phase: "pre-acceleration",
     tier: "pre",
@@ -296,6 +298,7 @@ By 9 PM tonight, write down your Top 5 weakest areas. This list becomes your Pha
   // ─── DAY 45 ─── June 8, Monday (Weekday · Phase 2 · hasQuiz: true — FINAL QUIZ DAY)
   {
     id: "2026-06-08",
+    date: "2026-06-08",
     dayNumber: 45,
     phase: "pre-acceleration",
     tier: "pre",
@@ -408,6 +411,7 @@ GO CLAIM YOUR 45th VICTORY. THE DUNGEON HAS BEEN CLEARED. NOW THE REAL BOSS FIGH
   // ─── DAY 46 ─── June 9, Tuesday (Weekday · Phase 3 BEGINS · hasQuiz: false)
   {
     id: "2026-06-09",
+    date: "2026-06-09",
     dayNumber: 46,
     phase: "pre-final-push",
     tier: "pre",
@@ -500,6 +504,7 @@ You don't prepare anymore. You PERFORM. Each mock is a dress rehearsal for the r
   // ─── DAY 47 ─── June 10, Wednesday (Weekday · Phase 3 · hasQuiz: false)
   {
     id: "2026-06-10",
+    date: "2026-06-10",
     dayNumber: 47,
     phase: "pre-final-push",
     tier: "pre",
@@ -611,6 +616,7 @@ You are not studying. You are PERFORMING. The knowledge is already inside you. P
   // ─── DAY 48 ─── June 11, Thursday (Weekday · Phase 3 · hasQuiz: false)
   {
     id: "2026-06-11",
+    date: "2026-06-11",
     dayNumber: 48,
     phase: "pre-final-push",
     tier: "pre",
@@ -716,6 +722,7 @@ After 3 days of Phase 3, you should have a clearer picture of your trajectory. A
   // ─── DAY 49 ─── June 12, Friday (Weekday · Phase 3 · hasQuiz: false)
   {
     id: "2026-06-12",
+    date: "2026-06-12",
     dayNumber: 49,
     phase: "pre-final-push",
     tier: "pre",
