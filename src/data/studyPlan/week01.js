@@ -1,6 +1,5 @@
-// Week 1 — Apr 25 (Thu) to May 1 (Wed) — Phase 1: Pre-Exam Foundation
-// Weekday: 2.5 hrs | Weekend: 8 hrs
-// Days 1-7 | ALL HAVE QUIZ
+// Week 1 — Apr 25 (Sat) to May 1 (Fri) — Phase 1: Pre-Exam Foundation
+// Sat-Sun (Days 1-2): 8 hrs | Mon-Fri (Days 3-7): 2.5 hrs | ALL HAVE QUIZ
 
 const WD_ENG = (id, date, subtasks) => ({ id:`${id}-eng`, subject:'English', icon:'📖', color:'#6366f1', duration:45, title:'English Block (45 min)', subtasks })
 const WD_GA  = (id, date, subtasks) => ({ id:`${id}-ga`,  subject:'General Awareness', icon:'🌏', color:'#10b981', duration:45, title:'GA & Current Affairs (45 min)', subtasks })
@@ -14,77 +13,9 @@ const s = (id, title, desc, tip, mins, mandatory=true) => ({ id, title, descript
 export const DAYS = [
   {
     id:'2026-04-25', dayNumber:1, date:'2026-04-25', phase:1, tier:1, weekNumber:1,
-    weekType:'weekday', totalHours:2.5, hasQuiz:true,
-    title:'Day 1 — Ratio Methods & Pattern Recognition',
-    promptBlock:`🎯 OPERATIVE BRIEFING — DAY 1
-
-You are now in the Pre-Exam Sprint. The Tier 1 examination is approximately 61 days away. This is not a practice session — this is war preparation.
-
-TODAY'S STRATEGIC DIRECTIVE:
-Your engineering brain is your weapon. Today we activate it fully. STOP using algebraic 'x' and 'y' methods for arithmetic. Every Percentage and P&L problem must be solved using ratio methods and fractional equivalents. This is non-negotiable.
-
-ENGLISH DIRECTIVE:
-50 One-Word Substitutions. Do not skim — speak each word aloud and write it once. OWS questions appear 3-4 times in Tier 1 and 4-6 times in Tier 2. Each missed OWS = -0.5 to -1 mark. The Blackbook is your bible.
-
-REASONING DIRECTIVE:
-Coding-Decoding and Number Series are the easiest 4-6 marks in Tier 1. But they become time traps if your pattern recognition is slow. Tonight's drill: if a pattern is not visible within 30 seconds → SKIP IMMEDIATELY. Build that reflex now.
-
-COMMUTE TASK: Watch one Current Affairs video (30-40 min) from any channel covering Nov 2025 – May 2026. Do not take notes. Passive absorption only.
-
-MINDSET: Day 1 sets the tempo. Set it high.`,
-    tasks: [
-      WD_ENG('d1','2026-04-25',[
-        s('d1-e1','Memorize 50 High-Frequency OWS','Open Blackbook of English Vocabulary — OWS Section. Read each word, its one-line meaning, and repeat aloud. Cover words 1-50 today.','Group by category (law, medicine, behavior). This boosts retention by 40% vs random memorization.',20),
-        s('d1-e2','Solve 20 PYQ Error Spotting Questions','Take error spotting PYQs from last 3 years. Focus ONLY on spotting grammatical errors — not intuition. Label each error type after solving.','Common traps: Subject-Verb agreement with "each/every", collective nouns, and comparative adjectives.',25),
-      ]),
-      WD_GA('d1','2026-04-25',[
-        s('d1-ga1','Current Affairs — Last 7 Days','Revise this week\'s current affairs from your preferred source (Parmar SSC / Vision IAS daily CA summary). Focus: appointments, awards, schemes.','Write just 3 facts per news item. More than that is wasteful.',20),
-        s('d1-ga2','Static GK — Polity Blast (Articles 1-30)','Quick revision of Preamble + Articles 1-30 of Indian Constitution. These appear almost every exam.','Just read and recall — don\'t rewrite notes at this stage.',25),
-      ]),
-      WD_QR('d1','2026-04-25',[
-        s('d1-qr1','40 PYQs — Percentages & Profit/Loss (RATIO METHOD ONLY)','Solve 40 mixed PYQs from Percentages and Profit/Loss. RULE: Do NOT use x/y variables. Use fractional equivalents and ratio chains only. Time yourself.','P&L: Mark-up% and Discount% → Net effect = (1+a)(1-b)-1. Keep this formula chain in your formula book.',35),
-        s('d1-qr2','50 Qs — Coding-Decoding + Number Series','Solve 2 sets of Coding-Decoding (25 Qs) and Number Series (25 Qs). Hard rule: 30-second timer per question. Skip if pattern not found.','For letter coding: always check +1/+2/+3 shift, reverse alphabet (Z=1), and alternate patterns first.',25),
-      ]),
-    ],
-  },
-  {
-    id:'2026-04-26', dayNumber:2, date:'2026-04-26', phase:1, tier:1, weekNumber:1,
-    weekType:'weekday', totalHours:2.5, hasQuiz:true,
-    title:'Day 2 — Idioms Arsenal & LCM Time Work',
-    promptBlock:`🎯 OPERATIVE BRIEFING — DAY 2
-
-Day 1 is done. The tempo is set. Now we build the arsenal.
-
-TODAY'S STRATEGIC DIRECTIVE:
-Idioms & Phrases are pure memory marks. 4-5 questions in Tier 1, 6-8 in Tier 2 = 18-24 marks minimum. Engineers skip this at their peril. 45 minutes today = guaranteed marks later.
-
-QUANT DIRECTIVE:
-Time & Work and Ratio & Proportion. Key insight: NEVER set up equations. Use LCM method for Time & Work — assign total work = LCM of given days, compute per-day rates, solve directly. This cuts solution time from 90 seconds to 20 seconds.
-
-REASONING DIRECTIVE:
-Analogy and Classification are confidence builders. They test lateral thinking, not math. An engineer who misses these is losing free marks. Train your mind to find the odd pattern in under 15 seconds.
-
-COMMUTE TASK: Same as Day 1 — 1 current affairs video passively. Different channel if possible.`,
-    tasks: [
-      WD_ENG('d2','2026-04-26',[
-        s('d2-e1','Memorize 50 Idioms & Phrases','Cover Idioms 1-50 from Blackbook. Each idiom: read the phrase, note its meaning, read the example sentence once.','Focus on ACTION idioms (burn bridges, bite the bullet, etc.) — these appear most frequently.',20),
-        s('d2-e2','20 Active/Passive Voice PYQs','Solve 20 Active↔Passive conversion PYQs. Treat each tense conversion as a FORMULA — not intuition.','Formula: Active (Subject + Verb + Object) → Passive (Object + be-verb[tense] + V3 + by + Subject). Memorize the be-verb chart for all 12 tenses.',25),
-      ]),
-      WD_GA('d2','2026-04-26',[
-        s('d2-ga1','Current Affairs — This Week','Continue daily CA revision. Focus: International relations, economic data (GDP, inflation figures), major defense exercises.','Key for SSC: India-specific international events and bilateral agreements.',20),
-        s('d2-ga2','Static GK — Important Constitutional Amendments','Revise: 42nd, 44th, 52nd, 61st, 73rd, 74th, 86th, 91st, 101st, 103rd amendments. These are examiner favorites.','Link each amendment to a clear mnemonic. E.g. 42nd = "Mini Constitution of Indira".',25),
-      ]),
-      WD_QR('d2','2026-04-26',[
-        s('d2-qr1','40 PYQs — Ratio & Proportion + Time & Work','Solve 40 PYQs. Time & Work: ALWAYS use LCM method. Ratio: Use componendo-dividendo for ratio equations.','Time & Work LCM method: If A=6 days, B=12 days → LCM=12, A does 2 units/day, B does 1 unit/day. Total work=12 units. Combined = 12/3 = 4 days.',35),
-        s('d2-qr2','Analogy + Classification — 50 Questions','Solve 25 Analogy + 25 Classification (Odd One Out) questions. Focus on finding the hidden rule quickly.','Classification: First identify 3 that share something. The 4th is the answer. Don\'t try all 4 starting points.',25),
-      ]),
-    ],
-  },
-  {
-    id:'2026-04-27', dayNumber:3, date:'2026-04-27', phase:1, tier:1, weekNumber:1,
     weekType:'weekend', totalHours:8, hasQuiz:true,
-    title:'Day 3 — Geometry Deep Dive + Grammar Architecture',
-    promptBlock:`🎯 OPERATIVE BRIEFING — DAY 3 (WEEKEND WARRIOR MODE)
+    title:'Day 1 — Geometry Deep Dive + Grammar Architecture',
+    promptBlock:`🎯 OPERATIVE BRIEFING — DAY 1 (WEEKEND WARRIOR MODE)
 
 8 hours. This is your forge. This is where rank gaps are created.
 
@@ -100,30 +31,30 @@ Full 60-minute mock — strict conditions: silence, no pausing, full paper. Then
 REVISION (1 HOUR):
 Every wrong answer gets categorized into 3 buckets: (1) Conceptual gap, (2) Calculation error, (3) Slow method. Update your formula sheet based on bucket 3.`,
     tasks: [
-      WE_DS('d3',[
-        s('d3-ds1','Geometry: Triangle Theorems & Centers (90 min)','Master: Congruence (SAS, ASA, AAS, SSS, RHS), Similarity (AA, SAS, SSS), and all 4 centers. Incenter: angle bisectors meet, equidistant from sides. Circumcenter: perpendicular bisectors meet, equidistant from vertices. Centroid: medians meet, divides 2:1. Orthocenter: altitudes meet.','Key result: In any triangle, Centroid divides median in 2:1 from vertex. Median to hypotenuse = half hypotenuse. Write these on index cards.',90),
-        s('d3-ds2','Geometry: Circle Theorems (60 min)','Cover: Angle in semicircle=90°, Angles in same segment equal, Tangent⊥Radius, Two tangents from external point are equal, Alternate Segment Theorem, Power of a Point.','Draw each theorem with a labeled diagram. Geometry without diagrams = geometry not learned.',60),
-        s('d3-ds3','English: Subject-Verb Agreement (60 min)','Rules with examples: Collective nouns (The team IS playing), Indefinite pronouns (Everyone IS), Correlative conjunctions (Neither A nor B → verb agrees with B), Inverted sentences (There ARE mistakes).','Write a rule → example → common trap card for each rule. 15 rules minimum.',60),
-        s('d3-ds4','English: Conditional Sentences (30 min)','Type 0 (fact), Type 1 (real future), Type 2 (hypothetical present), Type 3 (impossible past). Mixed conditionals. Write 5 example sentences for each type.','Common SSC trap: mixing tenses in one conditional clause. "If I will come" is ALWAYS wrong.',30),
-        s('d3-ds5','Read 2 Editorial Passages (30 min)','Read 2 full editorial articles from The Hindu or Indian Express. Time each: under 12 minutes per passage. Answer 5 inferred questions for each.','Note 5 new vocabulary words per passage — don\'t look them up now. Guess from context.',30),
+      WE_DS('d1',[
+        s('d1-ds1','Geometry: Triangle Theorems & Centers (90 min)','Master: Congruence (SAS, ASA, AAS, SSS, RHS), Similarity (AA, SAS, SSS), and all 4 centers. Incenter: angle bisectors meet, equidistant from sides. Circumcenter: perpendicular bisectors meet, equidistant from vertices. Centroid: medians meet, divides 2:1. Orthocenter: altitudes meet.','Key result: In any triangle, Centroid divides median in 2:1 from vertex. Median to hypotenuse = half hypotenuse. Write these on index cards.',90),
+        s('d1-ds2','Geometry: Circle Theorems (60 min)','Cover: Angle in semicircle=90°, Angles in same segment equal, Tangent⊥Radius, Two tangents from external point are equal, Alternate Segment Theorem, Power of a Point.','Draw each theorem with a labeled diagram. Geometry without diagrams = geometry not learned.',60),
+        s('d1-ds3','English: Subject-Verb Agreement (60 min)','Rules with examples: Collective nouns (The team IS playing), Indefinite pronouns (Everyone IS), Correlative conjunctions (Neither A nor B → verb agrees with B), Inverted sentences (There ARE mistakes).','Write a rule → example → common trap card for each rule. 15 rules minimum.',60),
+        s('d1-ds4','English: Conditional Sentences (30 min)','Type 0 (fact), Type 1 (real future), Type 2 (hypothetical present), Type 3 (impossible past). Mixed conditionals. Write 5 example sentences for each type.','Common SSC trap: mixing tenses in one conditional clause. "If I will come" is ALWAYS wrong.',30),
+        s('d1-ds5','Read 2 Editorial Passages (30 min)','Read 2 full editorial articles from The Hindu or Indian Express. Time each: under 12 minutes per passage. Answer 5 inferred questions for each.','Note 5 new vocabulary words per passage — don\'t look them up now. Guess from context.',30),
       ]),
-      WE_MT('d3',[
-        s('d3-mt1','Full Tier 1 Mock — 60 Minutes STRICT','Attempt a full 100-question mock on Testbook/Oliveboard. Timer starts, no pause, no outside help. Section order recommended: GA (5-7 min) → English (10-12 min) → Reasoning (15-18 min) → Quant (23-25 min).','If stuck on any question past 45 seconds, mark and move. Never get anchored.',60),
-        s('d3-mt2','Sectional Mock — Quant (30 min)','Attempt 50 Quant questions in 30 minutes = 36 seconds per question. Focus on executing ratio methods without switching back to equation methods.','Any question exceeding 60 seconds is a "trap question" — mark it and skip.',30),
-        s('d3-mt3','Sectional Mock — English (30 min)','50 English questions in 30 minutes. Grammar questions first (error spotting, voice, narration), then vocabulary, then comprehension.','Error spotting: Read the whole sentence once, then check each underlined part systematically.',30),
+      WE_MT('d1',[
+        s('d1-mt1','Full Tier 1 Mock — 60 Minutes STRICT','Attempt a full 100-question mock on Testbook/Oliveboard. Timer starts, no pause, no outside help. Section order recommended: GA (5-7 min) → English (10-12 min) → Reasoning (15-18 min) → Quant (23-25 min).','If stuck on any question past 45 seconds, mark and move. Never get anchored.',60),
+        s('d1-mt2','Sectional Mock — Quant (30 min)','Attempt 50 Quant questions in 30 minutes = 36 seconds per question. Focus on executing ratio methods without switching back to equation methods.','Any question exceeding 60 seconds is a "trap question" — mark it and skip.',30),
+        s('d1-mt3','Sectional Mock — English (30 min)','50 English questions in 30 minutes. Grammar questions first (error spotting, voice, narration), then vocabulary, then comprehension.','Error spotting: Read the whole sentence once, then check each underlined part systematically.',30),
       ]),
-      WE_REV('d3',[
-        s('d3-rev1','Categorize Every Error','Go through mock answer key. For each wrong answer: write the question ID, your answer, correct answer, and category: C=Conceptual, E=Calculation Error, O=Optimal Path missed.','Do NOT spend time re-solving every question. Just categorize and move on.',20),
-        s('d3-rev2','Update Formula Sheet','For every "O" (Optimal Path) error: write the correct shortcut/method in your personal formula book. This is the most important 20 minutes of your week.','Formula book should be a living document. Review it every single weekday morning.',20),
-        s('d3-rev3','Plan Next Week Weak Areas','Based on mock errors, identify 2 topics for next weekend\'s deep study. Write them down.','Prioritize by: (frequency of appearance × your error rate). Maximum impact topics first.',20),
+      WE_REV('d1',[
+        s('d1-rev1','Categorize Every Error','Go through mock answer key. For each wrong answer: write the question ID, your answer, correct answer, and category: C=Conceptual, E=Calculation Error, O=Optimal Path missed.','Do NOT spend time re-solving every question. Just categorize and move on.',20),
+        s('d1-rev2','Update Formula Sheet','For every "O" (Optimal Path) error: write the correct shortcut/method in your personal formula book. This is the most important 20 minutes of your week.','Formula book should be a living document. Review it every single weekday morning.',20),
+        s('d1-rev3','Plan Week 1 Weak Areas','Based on mock errors, identify 2 topics that need focused weekday drilling this week. Write them down now.','Prioritize by: (frequency of appearance × your error rate). Maximum impact topics first.',20),
       ]),
     ],
   },
   {
-    id:'2026-04-28', dayNumber:4, date:'2026-04-28', phase:1, tier:1, weekNumber:1,
+    id:'2026-04-26', dayNumber:2, date:'2026-04-26', phase:1, tier:1, weekNumber:1,
     weekType:'weekend', totalHours:8, hasQuiz:true,
-    title:'Day 4 — Algebra Mastery + Para Jumbles Intelligence',
-    promptBlock:`🎯 OPERATIVE BRIEFING — DAY 4
+    title:'Day 2 — Algebra Mastery + Para Jumbles Intelligence',
+    promptBlock:`🎯 OPERATIVE BRIEFING — DAY 2 (WEEKEND DAY 2)
 
 Second weapon forged. Algebra and Para Jumbles today.
 
@@ -139,21 +70,87 @@ Same intensity as yesterday. Log your section-wise time. Are you within the reco
 TRAP QUESTION DRILL:
 During revision, specifically identify questions you spent >90 seconds on. These are your "ego trap" questions — where you refused to skip. Calculate how many easy questions you missed because of this time drain.`,
     tasks: [
-      WE_DS('d4',[
-        s('d4-ds1','Algebra: Core Identities Mastery (90 min)','Memorize and drill: (a±b)²=a²±2ab+b², (a+b)(a-b)=a²-b², (a±b)³, a³±b³ factorizations. For each identity: (1) write from memory, (2) verify with a=2 b=3, (3) solve 5 SSC-style questions using it.','The "value-putting" hack: If question asks "If x+1/x=3, find x²+1/x²", square both sides directly. Never expand the hard way.',90),
-        s('d4-ds2','Algebra: Linear/Quadratic Equations + Surds (90 min)','Quadratic: Sum of roots = -b/a, Product of roots = c/a. If sum and product are given, directly reconstruct the quadratic. Surds: rationalize denominators, √a×√b=√(ab), (√a+√b)(√a-√b)=a-b.','Surd simplification hack: Always rationalize by multiplying conjugate. Keep irrational numbers separate from rational parts.',90),
-        s('d4-ds3','English: Cloze Test Strategy (60 min)','Read 3 full Cloze Test passages with blanks. Strategy: (1) Read full passage first for context, (2) Fill grammar-forced blanks first (articles, prepositions, tenses), (3) Fill vocabulary blanks last using context + elimination.','The most common cloze error: filling blanks grammatically correct but contextually wrong. Always re-read the filled passage.',60),
-        s('d4-ds4','English: Para Jumbles — 30 Questions (60 min)','Solve 30 Para Jumble questions. Apply the systematic approach: Find opener → find mandatory pairs → use connectors. Time limit: 90 seconds per question maximum.','Opener clues: Abstract/general statement, definition, historical context. Ender clues: Conclusion words (thus, finally, therefore, hence).',60),
+      WE_DS('d2',[
+        s('d2-ds1','Algebra: Core Identities Mastery (90 min)','Memorize and drill: (a±b)²=a²±2ab+b², (a+b)(a-b)=a²-b², (a±b)³, a³±b³ factorizations. For each identity: (1) write from memory, (2) verify with a=2 b=3, (3) solve 5 SSC-style questions using it.','The "value-putting" hack: If question asks "If x+1/x=3, find x²+1/x²", square both sides directly. Never expand the hard way.',90),
+        s('d2-ds2','Algebra: Linear/Quadratic Equations + Surds (90 min)','Quadratic: Sum of roots = -b/a, Product of roots = c/a. If sum and product are given, directly reconstruct the quadratic. Surds: rationalize denominators, √a×√b=√(ab), (√a+√b)(√a-√b)=a-b.','Surd simplification hack: Always rationalize by multiplying conjugate. Keep irrational numbers separate from rational parts.',90),
+        s('d2-ds3','English: Cloze Test Strategy (60 min)','Read 3 full Cloze Test passages with blanks. Strategy: (1) Read full passage first for context, (2) Fill grammar-forced blanks first (articles, prepositions, tenses), (3) Fill vocabulary blanks last using context + elimination.','The most common cloze error: filling blanks grammatically correct but contextually wrong. Always re-read the filled passage.',60),
+        s('d2-ds4','English: Para Jumbles — 30 Questions (60 min)','Solve 30 Para Jumble questions. Apply the systematic approach: Find opener → find mandatory pairs → use connectors. Time limit: 90 seconds per question maximum.','Opener clues: Abstract/general statement, definition, historical context. Ender clues: Conclusion words (thus, finally, therefore, hence).',60),
       ]),
-      WE_MT('d4',[
-        s('d4-mt1','Full Tier 1 Mock — 60 Minutes STRICT','Second full mock. Compare section time-splits with yesterday. Is GA taking <7 min? Is Reasoning under 18 min?','Track: Questions attempted, correct, wrong, skipped. The skipped number should decrease over weeks.',60),
-        s('d4-mt2','Sectional Mock — Reasoning (30 min)','50 Reasoning questions in 30 minutes. Target: Finish within 20 minutes to bank 10 minutes for review.','Immediately skip any question where the logic isn\'t visible in 30 seconds. Return only if time permits.',30),
-        s('d4-mt3','Sectional Mock — Quant (30 min)','50 Quant in 30 minutes. Focus on Arithmetic questions — these should take <20 seconds each with ratio methods.','Any Geometry question taking >60 seconds likely has a shortcut you\'re missing. Mark it for the revision hour.',30),
+      WE_MT('d2',[
+        s('d2-mt1','Full Tier 1 Mock — 60 Minutes STRICT','Second full mock. Compare section time-splits with yesterday. Is GA taking <7 min? Is Reasoning under 18 min?','Track: Questions attempted, correct, wrong, skipped. The skipped number should decrease over weeks.',60),
+        s('d2-mt2','Sectional Mock — Reasoning (30 min)','50 Reasoning questions in 30 minutes. Target: Finish within 20 minutes to bank 10 minutes for review.','Immediately skip any question where the logic isn\'t visible in 30 seconds. Return only if time permits.',30),
+        s('d2-mt3','Sectional Mock — Quant (30 min)','50 Quant in 30 minutes. Focus on Arithmetic questions — these should take <20 seconds each with ratio methods.','Any Geometry question taking >60 seconds likely has a shortcut you\'re missing. Mark it for the revision hour.',30),
       ]),
-      WE_REV('d4',[
-        s('d4-rev1','Identify Trap Questions','Specifically list every question that took >90 seconds. Were they worth attempting? Calculate the opportunity cost: 90 sec wasted = 2-3 easy questions missed.','Ego is the enemy in the exam hall. The elite ranker skips freely and returns if time permits.',20),
-        s('d4-rev2','Weak Area Diagnosis','Compare both mocks from Days 3 and 4. Which subject is consistently dragging? This determines next weekend\'s deep study priority.','Pattern recognition: If the same topic type is causing errors across both mocks, it\'s a conceptual gap, not a fluke.',20),
-        s('d4-rev3','Formula Book + Strategy Update','Add any new shortcuts discovered today. Write this week\'s key learning in one sentence.','Your formula book is your exam-day weapon. It should be reviewable in 30 minutes.',20),
+      WE_REV('d2',[
+        s('d2-rev1','Identify Trap Questions','Specifically list every question that took >90 seconds. Were they worth attempting? Calculate the opportunity cost: 90 sec wasted = 2-3 easy questions missed.','Ego is the enemy in the exam hall. The elite ranker skips freely and returns if time permits.',20),
+        s('d2-rev2','Weak Area Diagnosis','Compare both mocks from Days 1 and 2. Which subject is consistently dragging? This determines this week\'s focused PYQ drilling priority.','Pattern recognition: If the same topic type is causing errors across both mocks, it\'s a conceptual gap, not a fluke.',20),
+        s('d2-rev3','Formula Book + Strategy Update','Add any new shortcuts discovered today. Write this weekend\'s key learning in one sentence.','Your formula book is your exam-day weapon. It should be reviewable in 30 minutes.',20),
+      ]),
+    ],
+  },
+  {
+    id:'2026-04-27', dayNumber:3, date:'2026-04-27', phase:1, tier:1, weekNumber:1,
+    weekType:'weekday', totalHours:2.5, hasQuiz:true,
+    title:'Day 3 — Ratio Methods & Pattern Recognition',
+    promptBlock:`🎯 OPERATIVE BRIEFING — DAY 3
+
+You are now in the Pre-Exam Sprint. The Tier 1 examination is approximately 59 days away. This is not a practice session — this is war preparation.
+
+TODAY'S STRATEGIC DIRECTIVE:
+Your engineering brain is your weapon. Today we activate it fully. STOP using algebraic 'x' and 'y' methods for arithmetic. Every Percentage and P&L problem must be solved using ratio methods and fractional equivalents. This is non-negotiable.
+
+ENGLISH DIRECTIVE:
+50 One-Word Substitutions. Do not skim — speak each word aloud and write it once. OWS questions appear 3-4 times in Tier 1 and 4-6 times in Tier 2. Each missed OWS = -0.5 to -1 mark. The Blackbook is your bible.
+
+REASONING DIRECTIVE:
+Coding-Decoding and Number Series are the easiest 4-6 marks in Tier 1. But they become time traps if your pattern recognition is slow. Tonight's drill: if a pattern is not visible within 30 seconds → SKIP IMMEDIATELY. Build that reflex now.
+
+COMMUTE TASK: Watch one Current Affairs video (30-40 min) from any channel covering Nov 2025 – May 2026. Do not take notes. Passive absorption only.`,
+    tasks: [
+      WD_ENG('d3','2026-04-27',[
+        s('d3-e1','Memorize 50 High-Frequency OWS','Open Blackbook of English Vocabulary — OWS Section. Read each word, its one-line meaning, and repeat aloud. Cover words 1-50 today.','Group by category (law, medicine, behavior). This boosts retention by 40% vs random memorization.',20),
+        s('d3-e2','Solve 20 PYQ Error Spotting Questions','Take error spotting PYQs from last 3 years. Focus ONLY on spotting grammatical errors — not intuition. Label each error type after solving.','Common traps: Subject-Verb agreement with "each/every", collective nouns, and comparative adjectives.',25),
+      ]),
+      WD_GA('d3','2026-04-27',[
+        s('d3-ga1','Current Affairs — Last 7 Days','Revise this week\'s current affairs from your preferred source (Parmar SSC / Vision IAS daily CA summary). Focus: appointments, awards, schemes.','Write just 3 facts per news item. More than that is wasteful.',20),
+        s('d3-ga2','Static GK — Polity Blast (Articles 1-30)','Quick revision of Preamble + Articles 1-30 of Indian Constitution. These appear almost every exam.','Just read and recall — don\'t rewrite notes at this stage.',25),
+      ]),
+      WD_QR('d3','2026-04-27',[
+        s('d3-qr1','40 PYQs — Percentages & Profit/Loss (RATIO METHOD ONLY)','Solve 40 mixed PYQs from Percentages and Profit/Loss. RULE: Do NOT use x/y variables. Use fractional equivalents and ratio chains only. Time yourself.','P&L: Mark-up% and Discount% → Net effect = (1+a)(1-b)-1. Keep this formula chain in your formula book.',35),
+        s('d3-qr2','50 Qs — Coding-Decoding + Number Series','Solve 2 sets of Coding-Decoding (25 Qs) and Number Series (25 Qs). Hard rule: 30-second timer per question. Skip if pattern not found.','For letter coding: always check +1/+2/+3 shift, reverse alphabet (Z=1), and alternate patterns first.',25),
+      ]),
+    ],
+  },
+  {
+    id:'2026-04-28', dayNumber:4, date:'2026-04-28', phase:1, tier:1, weekNumber:1,
+    weekType:'weekday', totalHours:2.5, hasQuiz:true,
+    title:'Day 4 — Idioms Arsenal & LCM Time Work',
+    promptBlock:`🎯 OPERATIVE BRIEFING — DAY 4
+
+Day 3 is done. The tempo is set. Now we build the arsenal.
+
+TODAY'S STRATEGIC DIRECTIVE:
+Idioms & Phrases are pure memory marks. 4-5 questions in Tier 1, 6-8 in Tier 2 = 18-24 marks minimum. Engineers skip this at their peril. 45 minutes today = guaranteed marks later.
+
+QUANT DIRECTIVE:
+Time & Work and Ratio & Proportion. Key insight: NEVER set up equations. Use LCM method for Time & Work — assign total work = LCM of given days, compute per-day rates, solve directly. This cuts solution time from 90 seconds to 20 seconds.
+
+REASONING DIRECTIVE:
+Analogy and Classification are confidence builders. They test lateral thinking, not math. An engineer who misses these is losing free marks. Train your mind to find the odd pattern in under 15 seconds.
+
+COMMUTE TASK: Same as yesterday — 1 current affairs video passively. Different channel if possible.`,
+    tasks: [
+      WD_ENG('d4','2026-04-28',[
+        s('d4-e1','Memorize 50 Idioms & Phrases','Cover Idioms 1-50 from Blackbook. Each idiom: read the phrase, note its meaning, read the example sentence once.','Focus on ACTION idioms (burn bridges, bite the bullet, etc.) — these appear most frequently.',20),
+        s('d4-e2','20 Active/Passive Voice PYQs','Solve 20 Active↔Passive conversion PYQs. Treat each tense conversion as a FORMULA — not intuition.','Formula: Active (Subject + Verb + Object) → Passive (Object + be-verb[tense] + V3 + by + Subject). Memorize the be-verb chart for all 12 tenses.',25),
+      ]),
+      WD_GA('d4','2026-04-28',[
+        s('d4-ga1','Current Affairs — This Week','Continue daily CA revision. Focus: International relations, economic data (GDP, inflation figures), major defense exercises.','Key for SSC: India-specific international events and bilateral agreements.',20),
+        s('d4-ga2','Static GK — Important Constitutional Amendments','Revise: 42nd, 44th, 52nd, 61st, 73rd, 74th, 86th, 91st, 101st, 103rd amendments. These are examiner favorites.','Link each amendment to a clear mnemonic. E.g. 42nd = "Mini Constitution of Indira".',25),
+      ]),
+      WD_QR('d4','2026-04-28',[
+        s('d4-qr1','40 PYQs — Ratio & Proportion + Time & Work','Solve 40 PYQs. Time & Work: ALWAYS use LCM method. Ratio: Use componendo-dividendo for ratio equations.','Time & Work LCM method: If A=6 days, B=12 days → LCM=12, A does 2 units/day, B does 1 unit/day. Total work=12 units. Combined = 12/3 = 4 days.',35),
+        s('d4-qr2','Analogy + Classification — 50 Questions','Solve 25 Analogy + 25 Classification (Odd One Out) questions. Focus on finding the hidden rule quickly.','Classification: First identify 3 that share something. The 4th is the answer. Don\'t try all 4 starting points.',25),
       ]),
     ],
   },
@@ -177,12 +174,12 @@ Syllogism + Blood Relations. Syllogism: Always draw 2-circle Venn diagrams for A
 COMMUTE TASK: Current affairs video — continue from yesterday's session.`,
     tasks: [
       WD_ENG('d5','2026-04-29',[
-        s('d5-e1','Weekend Grammar Revision — 20 mins','Quickly re-read your notes on Subject-Verb Agreement and Conditional Sentences from Days 3-4. No re-learning, just activation.','Recite the 5 most important SVA rules from memory before opening your notes. Test retention.',15),
+        s('d5-e1','Weekend Grammar Revision — 20 mins','Quickly re-read your notes on Subject-Verb Agreement and Conditional Sentences from Days 1-2. No re-learning, just activation.','Recite the 5 most important SVA rules from memory before opening your notes. Test retention.',15),
         s('d5-e2','20 Fill-in-the-Blanks PYQs — Grammar Focus','Solve 20 FIB questions where grammar (not vocabulary) determines the answer. For each answer, write the rule name.','Common FIB grammar types: articles (a/an/the), prepositions (in/on/at), conjunctions, appropriate tense.',30),
       ]),
       WD_GA('d5','2026-04-29',[
         s('d5-ga1','Current Affairs — National Level Events','Focus: Major government schemes announced in last 60 days, RBI/Finance Ministry updates, important committee recommendations.','For schemes: Name → Ministry → Beneficiary → Key provision. 4-point framework per scheme.',20),
-        s('d5-ga2','Polity Revision — Fundamental Rights & DPSP','Articles 12-35 (Fundamental Rights) + Articles 36-51 (DPSP). Key differences: FR are justiciable, DPSP are non-justiciable. Remember Part III and Part IV.','Most asked: Article 21 (life & liberty), Article 32 (constitutional remedy), Article 14-18 (equality).', 25),
+        s('d5-ga2','Polity Revision — Fundamental Rights & DPSP','Articles 12-35 (Fundamental Rights) + Articles 36-51 (DPSP). Key differences: FR are justiciable, DPSP are non-justiciable. Remember Part III and Part IV.','Most asked: Article 21 (life & liberty), Article 32 (constitutional remedy), Article 14-18 (equality).',25),
       ]),
       WD_QR('d5','2026-04-29',[
         s('d5-qr1','40 PYQs — Algebra + Geometry Combined','Solve 30 Algebra PYQs (use value-putting) + 10 Geometry PYQs (apply theorems directly without derivation). Time: 35 minutes.','Geometry: If you don\'t see the theorem in 30 seconds, skip it. These are the "study more" questions not "exam day" questions.',35),
