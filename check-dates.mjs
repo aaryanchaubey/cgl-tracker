@@ -1,4 +1,4 @@
-const files = ['week01','week02','week03','week04','week05','week06','week07','week08','week09','week10','week11','week12','week13','week14','week15','week17','week18','week19','week20'];
+const files = ['week01','week02','week03','week04','week05','week06','week07','week08','week09','week10','week11','week12','week13','week14','week15','week16','week17','week18','week19','week20'];
 const DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 
 for (const f of files) {
